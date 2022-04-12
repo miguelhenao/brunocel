@@ -1,0 +1,13 @@
+<h2 class="menu-title">{{ title }}</h2>
+<mat-divider></mat-divider>
+<mat-list role="list">
+  <div *ngFor="let section of menuItems; let i=index">
+    <h3 class="menu-title">{{section.title}}</h3>
+    <app-menu-item *ngFor="let item of section.items" [item]="item"></app-menu-item>
+    <mat-divider *ngIf="(!(i === menuItems.length -1)) || hasLogout"></mat-divider>
+  </div>
+  <button *ngIf="hasLogout" mat-list-item matRipple class="btn-logout" (click)="onLogout()">
+    <mat-icon color="warn">logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+</mat-list>

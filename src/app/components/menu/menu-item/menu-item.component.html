@@ -1,0 +1,11 @@
+<a
+  matRipple
+  mat-list-item
+  matTooltipPosition="after"
+  [routerLink]="item.routerLink"
+  [matTooltip]="getTooltipMessage(item)"
+  [matTooltipDisabled]="!item.hasInfo"
+>
+  <mat-icon color="accent">{{ item.icon }}</mat-icon>
+  <span>{{ item.label }} </span>
+</a>

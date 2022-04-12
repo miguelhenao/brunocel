@@ -1,0 +1,19 @@
+<mat-toolbar color="accent">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon matTooltip="Menú">menu</mat-icon>
+  </button>
+  <span>Brunocel</span>
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" opened>
+    <app-menu
+      [menuItems]="menuItems"
+      (logout)="onLogout()"
+    ></app-menu>
+  </mat-drawer>
+
+  <mat-drawer-content class="sidenav-content">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

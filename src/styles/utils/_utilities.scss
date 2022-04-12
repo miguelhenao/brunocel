@@ -1,0 +1,35 @@
+.border-box {
+  box-sizing: border-box;
+}
+
+.force-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.img-responsive {
+  height: auto;
+  max-width: 50%;
+  width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.preserve-newlines {
+  white-space: pre-wrap;
+}
+
+.preserve-nowrap {
+  white-space: pre;
+}
+
+.w-100 {
+  width: 100%;
+}

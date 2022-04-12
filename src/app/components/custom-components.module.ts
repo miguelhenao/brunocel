@@ -8,10 +8,11 @@ import { RouterModule } from '@angular/router';
 
 import { MenuComponent } from './menu/menu.component';
 import { MenuItemComponent } from './menu/menu-item/menu-item.component';
+import { WrapperComponent } from './wrapper/wrapper.component';
 
 @NgModule({
-  declarations: [MenuComponent, MenuItemComponent],
+  declarations: [MenuComponent, MenuItemComponent, WrapperComponent],
   imports: [CommonModule, MatDividerModule, MatIconModule, MatListModule, MatTooltipModule, RouterModule],
-  exports: [MenuComponent, MenuItemComponent]
+  exports: [MenuComponent, MenuItemComponent, WrapperComponent]
 })
 export class CustomComponentsModule {}

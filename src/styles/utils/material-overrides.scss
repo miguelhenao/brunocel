@@ -26,3 +26,26 @@
 .mat-divider {
   margin: 5px 0 !important;
 }
+
+// Table
+
+table {
+  width: 100%;
+}
+
+.mat-column-actions {
+  width: 150px;
+}
+
+// Dialog
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+// Input
+
+.mat-form-field {
+  width: 100%;
+}

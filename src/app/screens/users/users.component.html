@@ -1,0 +1,12 @@
+<app-wrapper [title]="'Usuarios'">
+  <app-spinner *ngIf="isLoading$ | async; else listUsers"></app-spinner>
+  <ng-template #listUsers>
+    <div class="addButton" fxLayout="row" fxLayoutAlign="flex-end center">
+      <button mat-raised-button color="accent" (click)="openUpsertModal()" >
+        <mat-icon>person_add</mat-icon>
+        AGREGAR
+      </button>
+    </div>
+    <app-user-list [users$]="allUsers$" ></app-user-list>
+  </ng-template>
+</app-wrapper>

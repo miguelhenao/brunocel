@@ -3,7 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
 
-const routes: Routes = [{ path: '', component: AdminComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    component: AdminComponent,
+    children: [{ path: 'usuarios', loadChildren: () => import('../users/users.module').then(m => m.UsersModule) }]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

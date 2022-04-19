@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="formGroup">
+    <mat-form-field appearance="outline">
+      <mat-label>Cédula</mat-label>
+      <input matInput required formControlName="id">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('id')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput required formControlName="name">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('name')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Teléfono</mat-label>
+      <input matInput required formControlName="phone">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('phone')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección</mat-label>
+      <input matInput required formControlName="address">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('address')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Barrio</mat-label>
+      <input matInput required formControlName="neighborhood">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('neighborhood')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo de usuario</mat-label>
+      <input matInput required formControlName="type">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('type')!)}}</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-button
+    color="accent"
+    mat-dialog-close
+  >CANCELAR</button>
+  <button
+    mat-raised-button
+    color="accent"
+    [disabled]="isSaving$ | async"
+    (click)="save()"
+  >GUARDAR</button>
+</mat-dialog-actions>

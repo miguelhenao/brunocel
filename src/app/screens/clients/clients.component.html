@@ -1,0 +1,11 @@
+<app-wrapper [title]="'Clientes'">
+  <app-spinner *ngIf="isLoading$ | async; else listClients"></app-spinner>
+  <ng-template #listClients>
+    <div class="add-button " fxLayout="row" fxLayoutAlign="flex-end center">
+      <button mat-raised-button color="accent" >
+        <mat-icon>person_add</mat-icon>
+        AGREGAR
+      </button>
+    </div>
+  </ng-template>
+</app-wrapper>

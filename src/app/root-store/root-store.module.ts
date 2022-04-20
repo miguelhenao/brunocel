@@ -4,7 +4,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { routerReducer, RouterReducerState } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 
+import { AppStoreModule as ClientStoreModule } from './client/app-store.module';
 import { AppStoreModule as UserStoreModule } from './user/app-store.module';
+import { ClientService } from '../services/client.service';
 import { UserService } from '../services/user.service';
 
 export interface RootState {
@@ -28,8 +30,9 @@ export const rootStoreConfig = {
     CommonModule,
     StoreModule.forRoot(rootReducer, rootStoreConfig),
     EffectsModule.forRoot([]),
+    ClientStoreModule,
     UserStoreModule
   ],
-  providers: [UserService]
+  providers: [UserService, ClientService]
 })
 export class RootStoreModule {}

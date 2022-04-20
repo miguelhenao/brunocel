@@ -8,9 +8,10 @@ import { ClientsComponent } from './clients.component';
 import { CustomComponentsModule } from '../../components/custom-components.module';
 import { MaterialModule } from '../../helpers/modules/material.module';
 import { ClientUpsertComponent } from './components/client-upsert/client-upsert.component';
+import { ClientListComponent } from './components/client-list/client-list.component';
 
 @NgModule({
-  declarations: [ClientsComponent, ClientUpsertComponent],
+  declarations: [ClientsComponent, ClientUpsertComponent, ClientListComponent],
   imports: [
     CommonModule,
     ClientsRoutingModule,

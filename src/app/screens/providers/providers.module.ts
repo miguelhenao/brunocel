@@ -8,9 +8,10 @@ import { MaterialModule } from '../../helpers/modules/material.module';
 import { ProvidersRoutingModule } from './providers-routing.module';
 import { ProvidersComponent } from './providers.component';
 import { ProviderUpsertComponent } from './components/provider-upsert/provider-upsert.component';
+import { ProviderListComponent } from './components/provider-list/provider-list.component';
 
 @NgModule({
-  declarations: [ProvidersComponent, ProviderUpsertComponent],
+  declarations: [ProvidersComponent, ProviderUpsertComponent, ProviderListComponent],
   imports: [
     CommonModule,
     ProvidersRoutingModule,

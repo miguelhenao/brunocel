@@ -2,7 +2,7 @@
   <app-spinner *ngIf="isLoading$ | async; else listProviders"></app-spinner>
   <ng-template #listProviders>
     <div class="add-button " fxLayout="row" fxLayoutAlign="flex-end center">
-      <button mat-raised-button color="accent" >
+      <button mat-raised-button color="accent" (click)="openUpsertModal()" >
         <mat-icon>person_add</mat-icon>
         AGREGAR
       </button>

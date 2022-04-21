@@ -9,7 +9,11 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: 'usuarios', loadChildren: () => import('../users/users.module').then(m => m.UsersModule) },
-      { path: 'clientes', loadChildren: () => import('../clients/clients.module').then(m => m.ClientsModule) }
+      { path: 'clientes', loadChildren: () => import('../clients/clients.module').then(m => m.ClientsModule) },
+      {
+        path: 'proveedores',
+        loadChildren: () => import('../providers/providers.module').then(m => m.ProvidersModule)
+      }
     ]
   }
 ];
